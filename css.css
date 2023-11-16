@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: green;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -2; /* Move o canvas para trás, atrás dos outros elementos */
+  }
+
+  #login-form {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    z-index: 1; /* Garante que o formulário fique na frente do canvas */
+  }
+
+  #login-form input[type="text"],
+  #login-form input[type="password"],
+  #login-form button {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #0f0;
+    outline: none;
+  }
+
+  #login-form button:hover {
+    cursor: pointer;
+    background-color: #444;
+  }
